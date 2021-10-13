@@ -4,9 +4,7 @@ import Questions from './components/Questions';
 function App() {
   return (
     <StyledMain>
-      <section className='container'>
-        <Questions />
-      </section>
+      <Questions />
     </StyledMain>
   );
 }
