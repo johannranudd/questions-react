@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import data from './Data';
 import { GoPlusSmall } from 'react-icons/go';
 import { FiMinus } from 'react-icons/fi';
