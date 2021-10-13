@@ -27,14 +27,24 @@ export const StyledMain = styled.main`
         .question-and-buttons {
           display: flex;
           justify-content: space-between;
-
           position: relative;
           .btn-container button {
             position: absolute;
             right: 2rem;
             transform: translateX(50%);
-            background: transparent;
+            background: lightgrey;
+            border: none;
+            color: red;
+            border-radius: 50%;
+            height: 25px;
+            width: 25px;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
           }
+        }
+        .info {
+          padding: 1rem 0;
         }
       }
     }

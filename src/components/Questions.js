@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import data from './Data';
 import { GoPlusSmall } from 'react-icons/go';
 import { FiMinus } from 'react-icons/fi';
 
 const Questions = () => {
-  //   const { id, title, info } = data;
+  const [show, setShow] = useState(false);
+
+  const showContent = (id) => {
+    const filtered = data.filter((item) => {
+      if (item.id === id) {
+        return item;
+      }
+    });
+    console.log(filtered);
+    // setShow((prev) => {
+    //   const newShow = prev;
+    //   console.log(newShow);
+    //   return !newShow;
+    // });
+  };
   return (
     <article className='question-card'>
       <div className='headline'>
@@ -18,14 +32,14 @@ const Questions = () => {
               <h3>{title}</h3>
               <div className='btn-container'>
                 <button>
-                  <GoPlusSmall />
-                </button>
-                <button>
                   <FiMinus />
+                </button>
+                <button onClick={() => showContent(id)}>
+                  <GoPlusSmall />
                 </button>
               </div>
             </div>
-            <p className='info'>{info}</p>
+            {show ? <p className='info'>{info}</p> : ''}
           </div>
         );
       })}
