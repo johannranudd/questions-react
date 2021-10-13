@@ -14,7 +14,7 @@ export const StyledMain = styled.main`
       padding: 1.3rem;
       background: white;
       border-radius: 5px;
-      box-shadow: 0px 0px 10px #000000;
+      box-shadow: 0px 0px 10px #000;
       .headline h1 {
         padding: 2rem 0;
         font-size: 1.4rem;
