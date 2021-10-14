@@ -26,15 +26,9 @@ const Answer = ({ title, info }) => {
       <div className='question-and-buttons'>
         <h3>{title}</h3>
         <div className='btn-container'>
-          {show ? (
-            <button onClick={() => setShow(!show)}>
-              <FiMinus />
-            </button>
-          ) : (
-            <button onClick={() => setShow(!show)}>
-              <GoPlusSmall />
-            </button>
-          )}
+          <button onClick={() => setShow(!show)}>
+            {show ? <FiMinus /> : <GoPlusSmall />}
+          </button>
         </div>
       </div>
       {show ? <p className='info'>{info}</p> : ''}
